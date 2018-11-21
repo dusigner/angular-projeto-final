@@ -17,7 +17,7 @@ export class JogoDaVelhaComponent implements OnInit {
 
   /**
    * Retorna se a tela de início deve ser exibida.
-   * 
+   *
    * @return boolean
    */
   get showInicio(): boolean {
@@ -26,7 +26,7 @@ export class JogoDaVelhaComponent implements OnInit {
 
   /**
    * Retorna se o tabuleiro deve ser exibido.
-   * 
+   *
    * @return boolean
    */
   get showTabuleiro(): boolean {
@@ -35,7 +35,7 @@ export class JogoDaVelhaComponent implements OnInit {
 
   /**
    * Retorna se a tela de fim de jogo deve ser exibida.
-   * 
+   *
    * @return boolean
    */
   get showFinal(): boolean {
@@ -47,8 +47,9 @@ export class JogoDaVelhaComponent implements OnInit {
    *
    * @return void
    */
-  iniciarJogo(): void {
-  	this.jogoDaVelhaService.iniciarJogo();
+  iniciarJogo($event: any): void {
+    $event.preventDefault();
+    this.jogoDaVelhaService.iniciarJogo();
   }
 
   /**
@@ -63,7 +64,7 @@ export class JogoDaVelhaComponent implements OnInit {
   }
 
   /**
-   * Retorna se a peça X deve ser exibida para a 
+   * Retorna se a peça X deve ser exibida para a
    * coordena informada.
    *
    * @param number posX
@@ -75,7 +76,7 @@ export class JogoDaVelhaComponent implements OnInit {
   }
 
   /**
-   * Retorna se a peça O deve ser exibida para a 
+   * Retorna se a peça O deve ser exibida para a
    * coordena informada.
    *
    * @param number posX
@@ -87,7 +88,7 @@ export class JogoDaVelhaComponent implements OnInit {
   }
 
   /**
-   * Retorna se a marcação de vitória deve ser exibida para a 
+   * Retorna se a marcação de vitória deve ser exibida para a
    * coordena informada.
    *
    * @param number posX
@@ -100,7 +101,7 @@ export class JogoDaVelhaComponent implements OnInit {
 
   /**
    * Retorna o número do jogador a jogar.
-   * 
+   *
    * @return number
    */
   get jogador(): number {
@@ -109,11 +110,12 @@ export class JogoDaVelhaComponent implements OnInit {
 
   /**
    * Inicia um novo jogo.
-   * 
+   *
    * @return void
    */
-  novoJogo(): void {
-  	this.jogoDaVelhaService.novoJogo();
+  novoJogo($event): void {
+    $event.preventDefault();
+    this.jogoDaVelhaService.novoJogo();
   }
 
 }
