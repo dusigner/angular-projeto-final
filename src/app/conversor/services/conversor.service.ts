@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 //import { Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
-import { 
+import {
 	Conversao,
-	ConversaoResponse 
+	ConversaoResponse
 } from '../models';
 
 @Injectable()
@@ -37,7 +37,7 @@ export class ConversorService {
    * @param Conversao conversao
    * @return number
    */
-  cotacaoPara(conversaoResponse: ConversaoResponse, 
+  cotacaoPara(conversaoResponse: ConversaoResponse,
 		conversao: Conversao): number {
   	if (conversaoResponse === undefined) {
   		return 0;
@@ -53,7 +53,7 @@ export class ConversorService {
    * @param Conversao conversao
    * @return string
    */
-  cotacaoDe(conversaoResponse: ConversaoResponse, 
+  cotacaoDe(conversaoResponse: ConversaoResponse,
 		conversao: Conversao): string {
   	if (conversaoResponse === undefined) {
   		return '0';

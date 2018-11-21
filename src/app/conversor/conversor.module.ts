@@ -8,24 +8,28 @@ import { MoedaService, ConversorService } from './services';
 import { NumeroDirective } from './directives';
 import { ModalCotacaoComponent } from './utils';
 import { DataBrPipe } from './pipes';
+import { ConversorRoutingComponent } from './conversor-rounting.component';
+import { ConversorRoutingModule } from './conversor-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ConversorRoutingModule
   ],
   declarations: [
-  	ConversorComponent,
-  	NumeroDirective,
-  	ModalCotacaoComponent,
-  	DataBrPipe
+    ConversorComponent,
+    NumeroDirective,
+    ModalCotacaoComponent,
+    DataBrPipe,
+    ConversorRoutingComponent
   ],
   exports: [
-  	ConversorComponent
+    ConversorComponent
   ],
   providers: [
-  	MoedaService,
+    MoedaService,
     ConversorService
   ]
 })
